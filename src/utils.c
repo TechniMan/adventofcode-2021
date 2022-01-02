@@ -29,12 +29,12 @@ char ** ReadLinesFromFileAsStrings(const char * path, int lines)
         return NULL;
     }
 
-    const int bufSize = 12;
-    char * buffer = calloc(bufSize, sizeof(char));
+    const int BUFFER_SIZE = 15;
+    char * buffer = calloc(BUFFER_SIZE, sizeof(char));
     char ** result = calloc(lines, sizeof(char*));
-    for (int l = 0; fgets(buffer, bufSize, f) != NULL; ++l)
+    for (int l = 0; fgets(buffer, BUFFER_SIZE, f) != NULL; ++l)
     {
-        result[l] = calloc(bufSize, sizeof(char));
+        result[l] = calloc(BUFFER_SIZE, sizeof(char));
         strcpy(result[l], buffer);
     }
 

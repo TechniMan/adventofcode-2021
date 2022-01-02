@@ -10,4 +10,6 @@ $ cd advent-of-code-2021
 $ gcc src/01.c src/utils.c -o bin/01.exe && bin/01.exe
 ```
 
+Day 3 also requires linking the math library (add `-lm` to the build instruction).
+
 Tested in Ubuntu WSL2 on Windows 10.
