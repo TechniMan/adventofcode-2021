@@ -29,7 +29,7 @@ char ** ReadLinesFromFileAsStrings(const char * path, int lines)
         return NULL;
     }
 
-    const int BUFFER_SIZE = 15;
+    const int BUFFER_SIZE = 300;
     char * buffer = calloc(BUFFER_SIZE, sizeof(char));
     char ** result = calloc(lines, sizeof(char*));
     for (int l = 0; fgets(buffer, BUFFER_SIZE, f) != NULL; ++l)
